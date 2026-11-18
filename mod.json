@@ -1,0 +1,17 @@
+{
+  "geode": "$GEODE_VERSION",
+  "gd": {
+    "android": "2.208"
+  },
+  "id": "megagoreng.mega-mobile",
+  "name": "Mega Mobile",
+  "version": "v0.1.0",
+  "developer": "Mega Mobile Team",
+  "description": "Android-only mobile control panel foundation for Geometry Dash.",
+  "tags": [
+    "gameplay",
+    "interface",
+    "utility",
+    "offline"
+  ]
+}

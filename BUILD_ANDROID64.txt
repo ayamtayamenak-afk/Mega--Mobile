@@ -1,0 +1,29 @@
+MEGA MOBILE — ANDROID 64-BIT
+
+Persyaratan:
+- Geode CLI
+- Android NDK
+- ANDROID_NDK_ROOT diarahkan ke folder Android NDK
+- SDK binaries Geode untuk android64
+
+Perintah:
+  geode sdk install-binaries -p android64
+  geode build -p android64
+
+Output yang diharapkan:
+  build-android64/megagoreng.mega-mobile.geode
+
+Lokasi instalasi mod di Android (umumnya):
+  /storage/emulated/0/Android/media/com.geode.launcher/game/geode/mods/
+
+Perhatian:
+- File ZIP ini adalah SOURCE PROJECT, bukan file .geode hasil kompilasi.
+- Build belum dijalankan di sini karena membutuhkan Geode SDK, Geode CLI,
+  Android NDK, dan binary SDK Android64 yang sesuai.
+- Pastikan versi Geometry Dash yang benar. Jika game menunjukkan 2.2081,
+  ganti gd.android pada mod.json dari 2.208 menjadi 2.2081.
+
+
+CARA TERMUDAH TANPA PC:
+Lihat GITHUB_BUILD.md. Workflow GitHub Actions sudah tersedia di:
+.github/workflows/build-android64.yml
