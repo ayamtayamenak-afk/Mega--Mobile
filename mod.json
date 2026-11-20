@@ -1,12 +1,14 @@
 {
-  "geode": "6.0.0-alpha.3",
+  "geode": "5.0.0-alpha.1",
   "gd": {
     "android": "2.208"
   },
   "id": "megagoreng.mega-mobile",
   "name": "Mega Mobile",
   "version": "v0.1.0",
-  "developer": "ayamtayamenak-afk",
+  "developers": [
+    "ayamtayamenak-afk"
+  ],
   "description": "Mega Mobile - Android exclusive Geometry Dash mod menu.",
   "tags": [
     "gameplay",
