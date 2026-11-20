@@ -1,17 +1,16 @@
 {
-  "geode": "$GEODE_VERSION",
+  "geode": "6.0.0-alpha.3",
   "gd": {
     "android": "2.208"
   },
   "id": "megagoreng.mega-mobile",
   "name": "Mega Mobile",
   "version": "v0.1.0",
-  "developer": "Mega Mobile Team",
-  "description": "Android-only mobile control panel foundation for Geometry Dash.",
+  "developer": "ayamtayamenak-afk",
+  "description": "Mega Mobile - Android exclusive Geometry Dash mod menu.",
   "tags": [
     "gameplay",
     "interface",
-    "utility",
-    "offline"
+    "utility"
   ]
 }
