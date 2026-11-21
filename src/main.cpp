@@ -1,14 +1,18 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 
-using namespace geode::prelude_;
+using namespace geode::prelude;
 
 class $modify(MegaMobileMenu, MenuLayer) {
     bool init() {
         if (!MenuLayer::init())
             return false;
 
-        auto label = CCLabelBMFont::create("MEGA", "goldFont.fnt");
+        auto label = CCLabelBMFont::create(
+            "MEGA",
+            "goldFont.fnt"
+        );
+
         label->setScale(0.5f);
 
         auto button = CCMenuItemSpriteExtra::create(
@@ -22,6 +26,7 @@ class $modify(MegaMobileMenu, MenuLayer) {
         menu->setPosition({220, 80});
 
         this->addChild(menu);
+
         return true;
     }
 
