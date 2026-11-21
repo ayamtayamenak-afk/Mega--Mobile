@@ -1,7 +1,7 @@
-
 #include <Geode/Geode.hpp>
 #include <Geode/modify/MenuLayer.hpp>
 #include <Geode/modify/PlayLayer.hpp>
+#include <algorithm>
 
 using namespace geode::prelude;
 
@@ -22,7 +22,7 @@ public:
         return nullptr;
     }
 
-    bool init() {
+    bool init() override {
         if (!CCLayer::init())
             return false;
 
@@ -44,7 +44,8 @@ public:
 
     bool ccTouchBegan(CCTouch* touch, CCEvent*) override {
         auto point = convertToNodeSpace(touch->getLocation());
-        if (!m_button->getBoundingBox().containsPoint(point))
+
+        if (!m_button->boundingBox().containsPoint(point))
             return false;
 
         m_startTouch = touch->getLocation();
@@ -80,15 +81,11 @@ public:
     void openMenu() {
         FLAlertLayer::create(
             "MEGA MOBILE",
-            "<cy>GAMEPLAY</c>\n"
-            "Speed Hack\n"
-            "Practice Tools\n"
-            "Hitbox Options\n\n"
-            "<cg>PLAYER</c>\n"
-            "Player Options\n"
-            "Icon Options\n\n"
-            "<co>SETTINGS</c>\n"
-            "Mega Mobile Settings",
+            "Gameplay\n"
+            "Player\n"
+            "Settings\n"
+            "Tools\n\n"
+            "Mega Mobile",
             "CLOSE"
         )->show();
     }
