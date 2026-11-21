@@ -6,7 +6,7 @@
 using namespace geode::prelude;
 
 class MegaFloatingButton : public CCLayer {
-    CCLabelBMFont* m_button = nullptr;
+    CCSprite* m_button = nullptr;
     CCPoint m_startTouch;
     CCPoint m_startPosition;
     bool m_dragged = false;
@@ -26,8 +26,12 @@ public:
         if (!CCLayer::init())
             return false;
 
-        m_button = CCLabelBMFont::create("MEGA", "goldFont.fnt");
-        m_button->setScale(0.7f);
+        m_button = CCSprite::create("logo.png");
+
+        if (!m_button)
+            return false;
+
+        m_button->setScale(0.65f);
         m_button->setPosition({100, 180});
         addChild(m_button);
 
@@ -81,11 +85,11 @@ public:
     void openMenu() {
         FLAlertLayer::create(
             "MEGA MOBILE",
+            "MEGA MOBILE FEATURES\n\n"
             "Gameplay\n"
             "Player\n"
-            "Settings\n"
-            "Tools\n\n"
-            "Mega Mobile",
+            "Tools\n"
+            "Settings",
             "CLOSE"
         )->show();
     }
